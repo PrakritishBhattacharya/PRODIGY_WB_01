@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add styles for interactive navigation menu */
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        nav.scrolled {
+            background-color: #555; /* Change color when scrolled */
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00; /* Change color when hovering */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>E-commerce Website</h1>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product">
+            <img src="./img/iphone.jpeg" alt="Product 1">
+            <h2>iPhone 14</h2>
+            <p>$712.15</p>
+            <button>Add to Cart</button>
+        </section>
+
+        <section class="product">
+            <img src="./img/smartWatch.jpeg" alt="Product 2">
+            <h2>mi Smart Watch for Men</h2>
+            <p>$60.34</p>
+            <button>Add to Cart</button>
+        </section>
+
+        <section class="product">
+            <img src="./img/laptop.jpeg" alt="Product 3">
+            <h2>HP Laptop/Windows 10 Home/8GB RAM/2</h2>
+            <p>$892.25</p>
+            <button>Add to Cart</button>
+        </section>
+
+        <section class="product">
+            <img src="./img/lenses2.jpeg" alt="Product 3">
+            <h2></h2>
+            <p>$25.00</p>
+            <button>Add to Cart</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 E-commerce Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for changing navbar style on scroll
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            var navbar = document.getElementById("navbar");
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        }
+    </script>
+</body>
+</html>
